@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MVCNet.Models.Entity.User.User>
+
+
+<div class="mb-2">
+    @Html.ActionLink("Create New", "Create", null )
+</div>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(x => x.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.Password)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Email
+                </td>
+                <td>
+                    @item.Age
+                </td>
+                <td>
+                    @item.Password
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
